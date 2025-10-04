@@ -1,4 +1,4 @@
-import streamlit as st
+oimport streamlit as st
 
 def calcular_tropas_equilibrado(madera_actual, arcilla_actual, hierro_actual):
     unidades = [
@@ -44,14 +44,14 @@ def calcular_tropas_equilibrado(madera_actual, arcilla_actual, hierro_actual):
     return reclutamiento, madera_actual, arcilla_actual, hierro_actual
 
 # Interfaz Streamlit
-st.title("⚔️ Reclutador Tribal Equilibrado")
+st.title("⚔️ Reclutador Tribal Equilibrado yoelbulo")
 st.write("Ingresá tus recursos y obtené el plan óptimo de reclutamiento para dejar todo lo más cerca de cero.")
 
 madera = st.number_input("🌲 Madera", min_value=0, value=8000)
 arcilla = st.number_input("🧱 Arcilla", min_value=0, value=6000)
 hierro = st.number_input("쇠 Hierro", min_value=0, value=9000)
 
-if st.button("Reclutar"):
+if st.button("Calcular"):
     tropas, madera_restante, arcilla_restante, hierro_restante = calcular_tropas_equilibrado(madera, arcilla, hierro)
     st.subheader("✅ Plan de reclutamiento:")
     for unidad, cantidad in tropas.items():
@@ -61,3 +61,4 @@ if st.button("Reclutar"):
     st.write(f"🌲 Madera restante: {madera_restante}")
     st.write(f"🧱 Arcilla restante: {arcilla_restante}")
     st.write(f"쇠 Hierro restante: {hierro_restante}")
+
